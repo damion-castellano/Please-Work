@@ -12,4 +12,4 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("use_shovel"):
 		boat.get_parent().add_child(shovel_instance)
 		shovel_instance.global_position = boat.global_position
-		print("Shovel")
+		print("This is a Shovel")
