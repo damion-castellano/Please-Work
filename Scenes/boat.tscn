@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://2s06ytv218jo"]
+
+[ext_resource type="Script" uid="uid://dfms0w53pquvl" path="res://Scripts/boat.gd" id="1_g7r5y"]
+[ext_resource type="Texture2D" uid="uid://0lgbyuraa3ad" path="res://Assets/boat.png" id="2_badgh"]
+[ext_resource type="PackedScene" uid="uid://cjld2ktvbbg8l" path="res://Scenes/health_component.tscn" id="2_tcwdh"]
+[ext_resource type="PackedScene" uid="uid://8p6b0ojg3j5" path="res://Scenes/health_bar.tscn" id="3_tcwdh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4yqdo"]
+height = 22.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au6qu"]
+height = 22.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcwdh"]
+atlas = ExtResource("2_badgh")
+region = Rect2(96, 84, 96, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsvtm"]
+atlas = ExtResource("2_badgh")
+region = Rect2(192, 84, 96, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urfvk"]
+atlas = ExtResource("2_badgh")
+region = Rect2(0, 84, 96, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_au6qu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcwdh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsvtm")
+}],
+"loop": 1,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urfvk")
+}],
+"loop": 1,
+"name": &"right",
+"speed": 5.0
+}]
+
+[node name="Boat" type="CharacterBody2D" unique_id=800406253 groups=["player"]]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_g7r5y")
+metadata/_edit_group_ = true
+
+[node name="AbilityManager" type="Node" parent="." unique_id=1312073923]
+
+[node name="HealthComponent" parent="." unique_id=24910345 instance=ExtResource("2_tcwdh")]
+
+[node name="HealthBar" parent="." unique_id=18986568 node_paths=PackedStringArray("health_component") instance=ExtResource("3_tcwdh")]
+offset_left = -16.0
+offset_top = 18.0
+offset_right = 16.0
+offset_bottom = 26.0
+health_component = NodePath("../HealthComponent")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=879911468]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=113612599]
+shape = SubResource("CapsuleShape2D_4yqdo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1995877770]
+shape = SubResource("CapsuleShape2D_au6qu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2065003649]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_au6qu")
+animation = &"left"

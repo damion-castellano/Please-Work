@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dgvhiblvhlvtf"]
+
+[ext_resource type="Texture2D" uid="uid://vylm3gxvr5et" path="res://Assets/Shovel.png" id="1_lyedo"]
+
+[node name="Shovel" type="Node2D" unique_id=409958711]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2122743857]
+texture_filter = 1
+texture = ExtResource("1_lyedo")
+offset = Vector2(0, -7)

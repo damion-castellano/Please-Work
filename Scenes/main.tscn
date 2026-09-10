@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://j0due544w12g"]
+
+[ext_resource type="PackedScene" uid="uid://cht65qj6oweow" path="res://Scenes/obsticle_manager.tscn" id="1_8gbba"]
+[ext_resource type="PackedScene" uid="uid://2s06ytv218jo" path="res://Scenes/boat.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://cty508blpt7l" path="res://Scenes/shovel_controller.tscn" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://dcva1xbbka00" path="res://Scenes/border.tscn" id="3_8gbba"]
+
+[node name="Main" type="Node2D" unique_id=1511869122]
+
+[node name="ObsticleManager" parent="." unique_id=1465628770 instance=ExtResource("1_8gbba")]
+
+[node name="ShovelController" parent="." unique_id=368181875 instance=ExtResource("2_jjvhh")]
+
+[node name="Boat" parent="." unique_id=800406253 instance=ExtResource("1_jjgbg")]
+position = Vector2(363, 316)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=967311862]
+
+[node name="Border" parent="." unique_id=186990925 instance=ExtResource("3_8gbba")]
+collision_priority = 2.0
+
+[node name="Border2" parent="." unique_id=800207218 instance=ExtResource("3_8gbba")]
+position = Vector2(553, 1)

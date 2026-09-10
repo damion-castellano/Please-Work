@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cty508blpt7l"]
+
+[ext_resource type="Script" uid="uid://762bcphcqxdx" path="res://Scripts/shovel_controller.gd" id="1_v8b10"]
+[ext_resource type="PackedScene" uid="uid://dgvhiblvhlvtf" path="res://Scenes/shovel.tscn" id="2_1is41"]
+
+[node name="ShovelController" type="Node" unique_id=368181875]
+script = ExtResource("1_v8b10")
+shovel = ExtResource("2_1is41")

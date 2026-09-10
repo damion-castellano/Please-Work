@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cht65qj6oweow"]
+
+[ext_resource type="Script" uid="uid://c8x7reoo0dosa" path="res://Scripts/obsticle_manager.gd" id="1_c2fd8"]
+[ext_resource type="PackedScene" uid="uid://dvj3rrh7sg66n" path="res://Scenes/obsticle.tscn" id="2_k1mw0"]
+
+[node name="ObsticleManager" type="Node" unique_id=1465628770]
+script = ExtResource("1_c2fd8")
+obsticle_scene = ExtResource("2_k1mw0")
+
+[node name="Timer" type="Timer" parent="." unique_id=905926897]
+autostart = true
