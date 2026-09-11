@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bibxgmfidjp0n"]
 
 [ext_resource type="Texture2D" uid="uid://drv2g5rdcan63" path="res://Assets/gather aloe.png" id="1_hmqj8"]
-[ext_resource type="Script" uid="uid://clflnd6361mhi" path="res://Scenes/aloe.gd" id="2_0c4up"]
+[ext_resource type="Script" uid="uid://clflnd6361mhi" path="res://Scripts/aloe.gd" id="2_0c4up"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_au6qu"]
 size = Vector2(366.6667, 187.8788)

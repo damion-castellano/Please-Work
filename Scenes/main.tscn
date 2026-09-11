@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://j0due544w12g"]
 
 [ext_resource type="PackedScene" uid="uid://cht65qj6oweow" path="res://Scenes/obsticle_manager.tscn" id="1_8gbba"]
+[ext_resource type="Script" uid="uid://dsy2ar25scgwr" path="res://Scripts/main.gd" id="1_344ge"]
 [ext_resource type="PackedScene" uid="uid://2s06ytv218jo" path="res://Scenes/boat.tscn" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://uluhbbt1yxi0" path="res://Assets/bg water.png" id="1_kry3j"]
 [ext_resource type="PackedScene" uid="uid://bibxgmfidjp0n" path="res://Scenes/aloe.tscn" id="2_21xkr"]
 [ext_resource type="PackedScene" uid="uid://cty508blpt7l" path="res://Scenes/shovel_controller.tscn" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://p6vmpup16jdi" path="res://Scenes/end_screen.tscn" id="2_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://dcva1xbbka00" path="res://Scenes/border.tscn" id="3_8gbba"]
 
-[node name="Main" type="Node2D" unique_id=1511869122]
+[node name="Main" type="Node" unique_id=747271682]
+script = ExtResource("1_344ge")
+end_screen_scene = ExtResource("2_ynf5e")
 
 [node name="Water" type="Sprite2D" parent="." unique_id=1908203963]
 position = Vector2(325.99997, 178.99998)
@@ -19,6 +23,7 @@ position = Vector2(325.99997, 178.99998)
 scale = Vector2(0.10890001, 0.10890001)
 
 [node name="Boat" parent="." unique_id=800406253 instance=ExtResource("1_jjgbg")]
+unique_name_in_owner = true
 position = Vector2(363, 316)
 
 [node name="ObsticleManager" parent="." unique_id=1465628770 instance=ExtResource("1_8gbba")]

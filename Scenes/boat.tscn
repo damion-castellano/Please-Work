@@ -49,6 +49,7 @@ metadata/_edit_group_ = true
 [node name="AbilityManager" type="Node" parent="." unique_id=1312073923]
 
 [node name="HealthComponent" parent="." unique_id=24910345 instance=ExtResource("2_tcwdh")]
+max_health = 1.0
 
 [node name="HealthBar" parent="." unique_id=18986568 node_paths=PackedStringArray("health_component") instance=ExtResource("3_tcwdh")]
 offset_left = -16.0
