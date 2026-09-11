@@ -1,17 +1,23 @@
 [gd_scene format=3 uid="uid://dcva1xbbka00"]
 
+[ext_resource type="Texture2D" uid="uid://bx7fnn1ojoa4o" path="res://Assets/bg border land.png" id="1_3v7vi"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_au6qu"]
-size = Vector2(82, 360)
+size = Vector2(87, 360)
 
 [node name="Border" type="StaticBody2D" unique_id=186990925]
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2015364872]
-position = Vector2(43, 180)
+position = Vector2(40, 180)
 shape = SubResource("RectangleShape2D_au6qu")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=966714624]
-offset_right = 86.0
-offset_bottom = 360.0
-color = Color(1, 0.87058824, 0.54509807, 1)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1338101810]
+position = Vector2(595.5, 181)
+shape = SubResource("RectangleShape2D_au6qu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=580111075]
+position = Vector2(320, 180)
+scale = Vector2(0.33333337, 0.33333334)
+texture = ExtResource("1_3v7vi")

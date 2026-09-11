@@ -1,33 +1,23 @@
 [gd_scene format=3 uid="uid://2s06ytv218jo"]
 
 [ext_resource type="Script" uid="uid://dfms0w53pquvl" path="res://Scripts/boat.gd" id="1_g7r5y"]
-[ext_resource type="Texture2D" uid="uid://0lgbyuraa3ad" path="res://Assets/boat.png" id="2_badgh"]
 [ext_resource type="PackedScene" uid="uid://cjld2ktvbbg8l" path="res://Scenes/health_component.tscn" id="2_tcwdh"]
 [ext_resource type="PackedScene" uid="uid://8p6b0ojg3j5" path="res://Scenes/health_bar.tscn" id="3_tcwdh"]
+[ext_resource type="Texture2D" uid="uid://bnn5pnolqjnn4" path="res://Assets/boat forward.png" id="4_1i231"]
+[ext_resource type="Texture2D" uid="uid://7oag1llnfgr0" path="res://Assets/boat left tilt.png" id="5_wsvtm"]
+[ext_resource type="Texture2D" uid="uid://cvkf1wk2jdiaw" path="res://Assets/boat right tilt.png" id="6_urfvk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4yqdo"]
-height = 22.0
+height = 40.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au6qu"]
 height = 22.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tcwdh"]
-atlas = ExtResource("2_badgh")
-region = Rect2(96, 84, 96, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wsvtm"]
-atlas = ExtResource("2_badgh")
-region = Rect2(192, 84, 96, 42)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_urfvk"]
-atlas = ExtResource("2_badgh")
-region = Rect2(0, 84, 96, 42)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_au6qu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tcwdh")
+"texture": ExtResource("4_1i231")
 }],
 "loop": 1,
 "name": &"default",
@@ -35,7 +25,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wsvtm")
+"texture": ExtResource("5_wsvtm")
 }],
 "loop": 1,
 "name": &"left",
@@ -43,7 +33,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_urfvk")
+"texture": ExtResource("6_urfvk")
 }],
 "loop": 1,
 "name": &"right",
@@ -77,5 +67,5 @@ shape = SubResource("CapsuleShape2D_au6qu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2065003649]
 texture_filter = 1
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_au6qu")
-animation = &"left"

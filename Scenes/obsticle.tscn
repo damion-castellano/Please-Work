@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://dvj3rrh7sg66n"]
 
 [ext_resource type="Script" uid="uid://d4ibifthvmugn" path="res://Scripts/obsticle.gd" id="1_4qaj3"]
-[ext_resource type="Texture2D" uid="uid://xbvuf7ir0fbh" path="res://icon.svg" id="1_07nlk"]
+[ext_resource type="Texture2D" uid="uid://e2nw0qd025bm" path="res://Assets/branch 1.png" id="2_4qaj3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmgec"]
-size = Vector2(117, 117)
+size = Vector2(91, 35)
 
 [node name="Obsticle" type="Area2D" unique_id=1957772657]
 script = ExtResource("1_4qaj3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1162121435]
-texture = ExtResource("1_07nlk")
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("2_4qaj3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1955837624]
-position = Vector2(-1.5, -0.5)
+position = Vector2(3, -3)
 shape = SubResource("RectangleShape2D_pmgec")
