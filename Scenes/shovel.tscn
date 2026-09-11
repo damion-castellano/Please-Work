@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dgvhiblvhlvtf"]
 
 [ext_resource type="Texture2D" uid="uid://ckidag0ad88as" path="res://Assets/shovle swing.png" id="1_lyedo"]
+[ext_resource type="Script" uid="uid://dxa2pw5ynmnq8" path="res://Scripts/shovel.gd" id="1_o1hr1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_au6qu"]
 size = Vector2(133.33334, 368.88892)
@@ -81,6 +82,7 @@ _data = {
 }
 
 [node name="Shovel" type="Node2D" unique_id=409958711]
+script = ExtResource("1_o1hr1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2122743857]
 texture_filter = 1
@@ -89,8 +91,8 @@ scale = Vector2(-0.105, -0.105)
 texture = ExtResource("1_lyedo")
 
 [node name="HitBox" type="Area2D" parent="Sprite2D" unique_id=1949129910]
-collision_layer = 0
-collision_mask = 4
+collision_layer = 4
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitBox" unique_id=2031828926]
 position = Vector2(4.444441, -2.2221882)
@@ -99,3 +101,5 @@ shape = SubResource("RectangleShape2D_au6qu")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=199255794]
 libraries/ = SubResource("AnimationLibrary_m4ff3")
 autoplay = &"swing"
+
+[connection signal="area_entered" from="Sprite2D/HitBox" to="." method="_on_hit_box_area_entered"]

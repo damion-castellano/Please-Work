@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bibxgmfidjp0n"]
+
+[ext_resource type="Texture2D" uid="uid://drv2g5rdcan63" path="res://Assets/gather aloe.png" id="1_hmqj8"]
+[ext_resource type="Script" uid="uid://clflnd6361mhi" path="res://Scenes/aloe.gd" id="2_0c4up"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_au6qu"]
+size = Vector2(366.6667, 187.8788)
+
+[node name="Aloe" type="Sprite2D" unique_id=936485426]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_hmqj8")
+script = ExtResource("2_0c4up")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=533289838]
+collision_layer = 9
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1948389942]
+position = Vector2(13.636373, 33.333332)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_au6qu")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

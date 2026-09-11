@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cht65qj6oweow" path="res://Scenes/obsticle_manager.tscn" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://2s06ytv218jo" path="res://Scenes/boat.tscn" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://uluhbbt1yxi0" path="res://Assets/bg water.png" id="1_kry3j"]
+[ext_resource type="PackedScene" uid="uid://bibxgmfidjp0n" path="res://Scenes/aloe.tscn" id="2_21xkr"]
 [ext_resource type="PackedScene" uid="uid://cty508blpt7l" path="res://Scenes/shovel_controller.tscn" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://dcva1xbbka00" path="res://Scenes/border.tscn" id="3_8gbba"]
 
@@ -12,6 +13,10 @@
 position = Vector2(325.99997, 178.99998)
 scale = Vector2(0.33, 0.33)
 texture = ExtResource("1_kry3j")
+
+[node name="Aloe" parent="." unique_id=936485426 instance=ExtResource("2_21xkr")]
+position = Vector2(325.99997, 178.99998)
+scale = Vector2(0.10890001, 0.10890001)
 
 [node name="Boat" parent="." unique_id=800406253 instance=ExtResource("1_jjgbg")]
 position = Vector2(363, 316)
