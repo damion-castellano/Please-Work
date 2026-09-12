@@ -8,10 +8,21 @@
 [ext_resource type="PackedScene" uid="uid://cty508blpt7l" path="res://Scenes/shovel_controller.tscn" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://p6vmpup16jdi" path="res://Scenes/end_screen.tscn" id="2_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://dcva1xbbka00" path="res://Scenes/border.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://b25gc880fg6og" path="res://Scenes/play_time_ui.tscn" id="3_hptm8"]
+[ext_resource type="PackedScene" uid="uid://b0e6eliuaswi3" path="res://Scenes/time_manager.tscn" id="3_ynf5e"]
 
 [node name="Main" type="Node" unique_id=747271682]
 script = ExtResource("1_344ge")
 end_screen_scene = ExtResource("2_ynf5e")
+
+[node name="PlayTimeUI" parent="." unique_id=182545410 node_paths=PackedStringArray("play_time_manager") instance=ExtResource("3_hptm8")]
+play_time_manager = NodePath("../TimeManager")
+
+[node name="TimeManager" parent="." unique_id=904814452 instance=ExtResource("3_ynf5e")]
+
+[node name="ObsticleManager" parent="." unique_id=1465628770 instance=ExtResource("1_8gbba")]
+
+[node name="ShovelController" parent="." unique_id=368181875 instance=ExtResource("2_jjvhh")]
 
 [node name="Water" type="Sprite2D" parent="." unique_id=1908203963]
 position = Vector2(325.99997, 178.99998)
@@ -25,10 +36,6 @@ scale = Vector2(0.10890001, 0.10890001)
 [node name="Boat" parent="." unique_id=800406253 instance=ExtResource("1_jjgbg")]
 unique_name_in_owner = true
 position = Vector2(363, 316)
-
-[node name="ObsticleManager" parent="." unique_id=1465628770 instance=ExtResource("1_8gbba")]
-
-[node name="ShovelController" parent="." unique_id=368181875 instance=ExtResource("2_jjvhh")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=967311862]
 
