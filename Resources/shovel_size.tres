@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cdejmn5cip7g3"]
+
+[ext_resource type="Script" uid="uid://dsaq62s4601h6" path="res://Scripts/ability_upgrade.gd" id="1_84vlf"]
+
+[resource]
+script = ExtResource("1_84vlf")
+id = "shovel_size"
+name = "Shovel Size"
+description = "Makes your shovel bigger!"

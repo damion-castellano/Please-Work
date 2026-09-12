@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bl4cwhynjoosv"]
+
+[ext_resource type="Script" uid="uid://b1rl476l7pwub" path="res://Scripts/start_menu.gd" id="1_jgtwh"]
+[ext_resource type="Texture2D" uid="uid://78gmltygjr2d" path="res://Assets/main menu.png" id="2_m6uer"]
+[ext_resource type="FontFile" uid="uid://cxkikhbds3p3c" path="res://Assets/Super Three Personal Use Only.ttf" id="3_m6uer"]
+
+[node name="StartMenu" type="Node" unique_id=105976687]
+script = ExtResource("1_jgtwh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=578819279]
+position = Vector2(319.99997, 179.99998)
+scale = Vector2(0.33333334, 0.3333333)
+texture = ExtResource("2_m6uer")
+
+[node name="ButtonManager" type="Control" parent="." unique_id=1638043788]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="ButtonManager" unique_id=1973652911]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 118.0
+offset_right = 542.0
+offset_bottom = 149.0
+theme_override_fonts/font = ExtResource("3_m6uer")
+text = "Start"
+
+[node name="Options" type="Button" parent="ButtonManager" unique_id=2125260357]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 157.0
+offset_right = 555.0
+offset_bottom = 188.0
+theme_override_fonts/font = ExtResource("3_m6uer")
+text = "Options"
+
+[node name="Quit" type="Button" parent="ButtonManager" unique_id=2034903414]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 197.0
+offset_right = 542.0
+offset_bottom = 228.0
+theme_override_fonts/font = ExtResource("3_m6uer")
+text = "Quit"
+
+[connection signal="pressed" from="ButtonManager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ButtonManager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ButtonManager/Quit" to="." method="_on_quit_pressed"]

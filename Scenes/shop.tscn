@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ctg6lc4vqhx12"]
+
+[ext_resource type="Texture2D" uid="uid://uluhbbt1yxi0" path="res://Assets/bg water.png" id="1_2shtd"]
+[ext_resource type="Texture2D" uid="uid://dh0aoikbvrivv" path="res://Assets/beach camp.png" id="2_io27d"]
+
+[node name="Shop" type="Node" unique_id=1149620072]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=695659259]
+position = Vector2(308, 103)
+texture = ExtResource("1_2shtd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1033384896]
+position = Vector2(320.00003, 180)
+scale = Vector2(0.33333337, 0.33333337)
+texture = ExtResource("2_io27d")

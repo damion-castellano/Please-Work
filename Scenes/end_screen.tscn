@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://p6vmpup16jdi"]
 
 [ext_resource type="Script" uid="uid://cs76ho40jsul" path="res://Scripts/end_screen.gd" id="1_f2mtv"]
+[ext_resource type="FontFile" uid="uid://cxkikhbds3p3c" path="res://Assets/Super Three Personal Use Only.ttf" id="2_1gwaw"]
 
 [node name="EndScreen" type="CanvasLayer" unique_id=1089577899]
 process_mode = 3
@@ -32,6 +33,7 @@ layout_mode = 2
 [node name="TitleLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1539676447]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1gwaw")
 theme_override_font_sizes/font_size = 24
 text = "Victory"
 horizontal_alignment = 1
@@ -39,15 +41,18 @@ horizontal_alignment = 1
 [node name="DescriptionLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1173249819]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1gwaw")
 text = "You won!"
 horizontal_alignment = 1
 
 [node name="RestartButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=451072563]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1gwaw")
 text = "Restart"
 
 [node name="QuitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1947063887]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1gwaw")
 text = "Quit"

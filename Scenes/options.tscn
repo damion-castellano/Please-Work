@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cyunbci3aigob"]
+
+[ext_resource type="Script" uid="uid://18u851kon4l7" path="res://Scripts/options.gd" id="1_prnvy"]
+
+[node name="Options" type="Node" unique_id=2113608704]
+script = ExtResource("1_prnvy")

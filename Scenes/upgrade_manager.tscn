@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dvluw0potf11d"]
+
+[ext_resource type="Script" uid="uid://b6u0obbr87gxi" path="res://Scripts/upgrade_manager.gd" id="1_4d7jm"]
+[ext_resource type="Script" uid="uid://dsaq62s4601h6" path="res://Scripts/ability_upgrade.gd" id="2_gv8yo"]
+[ext_resource type="Resource" uid="uid://cdejmn5cip7g3" path="res://Resources/shovel_size.tres" id="3_ykua7"]
+
+[node name="UpgradeManager" type="Node" unique_id=1004089490]
+script = ExtResource("1_4d7jm")
+upgrades = Array[ExtResource("2_gv8yo")]([ExtResource("3_ykua7")])
