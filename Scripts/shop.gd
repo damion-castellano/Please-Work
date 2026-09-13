@@ -14,5 +14,9 @@ func _on_button_pressed() -> void:
 
 
 func _on_shovel_size_pressed() -> void:
-	Global.shovel_scale *= 1.2
-	print("working")
+	if Global.plants >= 5:
+		Global.shovel_scale *= 1.2
+		Global.plants -= 5
+		print("working")
+	else:
+		print("You Broke")

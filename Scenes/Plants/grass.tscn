@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dkxs6s476ncco"]
+
+[ext_resource type="Texture2D" uid="uid://by2id0ayrba60" path="res://Assets/gather grass.png" id="1_vjh0v"]
+[ext_resource type="Script" uid="uid://clflnd6361mhi" path="res://Scripts/aloe.gd" id="1_xi1nx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au6qu"]
+radius = 78.78787
+height = 333.3333
+
+[node name="Grass" type="Node2D" unique_id=1434311086]
+script = ExtResource("1_xi1nx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=945649769]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_vjh0v")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=736403163]
+collision_layer = 9
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=852241225]
+position = Vector2(15.151514, 24.242424)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_au6qu")
+
+[connection signal="area_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_entered"]

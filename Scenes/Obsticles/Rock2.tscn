@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://62p17itb40oj"]
+
+[ext_resource type="Texture2D" uid="uid://cvo1jqxr1r74w" path="res://Assets/rock 1.png" id="1_4yyuo"]
+[ext_resource type="Script" uid="uid://d4ibifthvmugn" path="res://Scripts/obsticle.gd" id="1_f24jj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au6qu"]
+radius = 38.999958
+height = 186.00273
+
+[node name="Rock2" type="Node2D" unique_id=125263271]
+script = ExtResource("1_f24jj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1096519576]
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_4yyuo")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=924958639]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1195901440]
+position = Vector2(11.999999, -15.000001)
+rotation = -1.572263
+shape = SubResource("CapsuleShape2D_au6qu")

@@ -7,7 +7,7 @@
 size = Vector2(366.6667, 187.8788)
 
 [node name="Aloe" type="Sprite2D" unique_id=936485426]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.18, 0.18)
 texture = ExtResource("1_hmqj8")
 script = ExtResource("2_0c4up")
 

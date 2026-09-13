@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dcva1xbbka00" path="res://Scenes/border.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://b25gc880fg6og" path="res://Scenes/play_time_ui.tscn" id="3_hptm8"]
 [ext_resource type="PackedScene" uid="uid://b0e6eliuaswi3" path="res://Scenes/time_manager.tscn" id="3_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://blaqsamg0w4pf" path="res://Scenes/plant_spawner.tscn" id="4_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://qmfswrlvw4ib" path="res://Scenes/Plants/cactus.tscn" id="9_6iyac"]
 
 [node name="Main" type="Node" unique_id=747271682]
 script = ExtResource("1_344ge")
@@ -17,6 +19,8 @@ end_screen_scene = ExtResource("2_ynf5e")
 
 [node name="PlayTimeUI" parent="." unique_id=182545410 node_paths=PackedStringArray("play_time_manager") instance=ExtResource("3_hptm8")]
 play_time_manager = NodePath("../TimeManager")
+
+[node name="PlantSpawner" parent="." unique_id=1526748311 instance=ExtResource("4_d1ilt")]
 
 [node name="TimeManager" parent="." unique_id=904814452 instance=ExtResource("3_ynf5e")]
 
@@ -29,12 +33,20 @@ position = Vector2(325.99997, 178.99998)
 scale = Vector2(0.33, 0.33)
 texture = ExtResource("1_kry3j")
 
+[node name="Cactus" parent="." unique_id=1396238161 instance=ExtResource("9_6iyac")]
+position = Vector2(447, 38)
+
 [node name="Aloe" parent="." unique_id=936485426 instance=ExtResource("2_21xkr")]
-position = Vector2(325.99997, 178.99998)
+position = Vector2(296, 162.99998)
+scale = Vector2(0.10890001, 0.10890001)
+
+[node name="Aloe2" parent="." unique_id=2129294022 instance=ExtResource("2_21xkr")]
+position = Vector2(216, 44)
 scale = Vector2(0.10890001, 0.10890001)
 
 [node name="Boat" parent="." unique_id=800406253 instance=ExtResource("1_jjgbg")]
 unique_name_in_owner = true
+z_index = 127
 position = Vector2(363, 316)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=967311862]

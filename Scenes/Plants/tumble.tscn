@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://qk8aw5606vwg"]
+
+[ext_resource type="Script" uid="uid://clflnd6361mhi" path="res://Scripts/aloe.gd" id="1_8ttu0"]
+[ext_resource type="Texture2D" uid="uid://bg5rtq647n2v2" path="res://Assets/gather tumbleweed.png" id="1_x4tix"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au6qu"]
+radius = 123.0
+height = 374.0
+
+[node name="Tumble" type="Node2D" unique_id=692660346]
+script = ExtResource("1_8ttu0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1442623384]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_x4tix")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=2000424527]
+collision_layer = 9
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=784933235]
+position = Vector2(11, -18)
+rotation = 1.5707964
+scale = Vector2(0.33, 0.33)
+shape = SubResource("CapsuleShape2D_au6qu")
+
+[connection signal="area_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_entered"]

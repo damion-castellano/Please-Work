@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://c8x7reoo0dosa" path="res://Scripts/obsticle_manager.gd" id="1_c2fd8"]
 [ext_resource type="PackedScene" uid="uid://dvj3rrh7sg66n" path="res://Scenes/obsticle.tscn" id="2_k1mw0"]
+[ext_resource type="PackedScene" uid="uid://b3tyc6tmclwwh" path="res://Scenes/Obsticles/Rock1.tscn" id="3_5hn7q"]
+[ext_resource type="PackedScene" uid="uid://62p17itb40oj" path="res://Scenes/Obsticles/Rock2.tscn" id="4_iuwni"]
 
 [node name="ObsticleManager" type="Node" unique_id=1465628770]
 script = ExtResource("1_c2fd8")
-obsticle_scene = ExtResource("2_k1mw0")
+obsticle_scenes = Array[PackedScene]([ExtResource("2_k1mw0"), ExtResource("3_5hn7q"), ExtResource("4_iuwni")])
 
 [node name="Timer" type="Timer" parent="." unique_id=905926897]
+wait_time = 0.75
 autostart = true

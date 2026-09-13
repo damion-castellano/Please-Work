@@ -49,8 +49,10 @@ layout_mode = 2
 
 [node name="ShovelSize" type="Button" parent="ShopSystem/CanvasLayer/GridContainer/Panel" unique_id=704683572]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = -73.0
+offset_top = 95.0
+offset_right = 23.0
+offset_bottom = 123.0
 theme_override_fonts/font = ExtResource("4_fdj0q")
 text = "Shovel Size"
 
