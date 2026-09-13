@@ -20,3 +20,11 @@ func _on_shovel_size_pressed() -> void:
 		print("working")
 	else:
 		print("You Broke")
+
+
+
+func _on_end_game_pressed() -> void:
+	if Global.plants >= 50:
+		get_tree().change_scene_to_file("res://Scenes/ending_screen.tscn")
+	else:
+		print("broke")

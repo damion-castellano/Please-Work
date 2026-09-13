@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://dwfu27kqcpjvq"]
+
+[ext_resource type="Script" uid="uid://88s2vtdlojoy" path="res://Scripts/ending_screen.gd" id="1_nmnc2"]
+[ext_resource type="Texture2D" uid="uid://uluhbbt1yxi0" path="res://Assets/bg water.png" id="2_0vuqh"]
+[ext_resource type="Texture2D" uid="uid://b8ub5yfo120ir" path="res://Assets/grand-canyon-botanists.jpg" id="3_xik8g"]
+[ext_resource type="FontFile" uid="uid://cxkikhbds3p3c" path="res://Assets/Super Three Personal Use Only.ttf" id="4_5wvsv"]
+[ext_resource type="Texture2D" uid="uid://csgl8jvw254ym" path="res://Assets/bag.png" id="5_rhhvx"]
+[ext_resource type="Texture2D" uid="uid://cmkhhrce6d2sr" path="res://Assets/boat left.png" id="6_p2vt5"]
+[ext_resource type="Texture2D" uid="uid://dibqxux3afog3" path="res://Assets/boat right.png" id="7_8gwtd"]
+[ext_resource type="Texture2D" uid="uid://djhidn7rayrja" path="res://Assets/option boat.png" id="8_7x7lc"]
+[ext_resource type="Texture2D" uid="uid://0vnuadiwqgqn" path="res://Assets/option health.png" id="9_b20is"]
+[ext_resource type="Texture2D" uid="uid://c7m14xxtj0bjy" path="res://Assets/tumbleweed floating.png" id="10_leltq"]
+[ext_resource type="Texture2D" uid="uid://cydnio8e6wcgy" path="res://Assets/slash.png" id="11_0pnf8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_au6qu"]
+bg_color = Color(0, 0, 0, 0.654902)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmgec"]
+bg_color = Color(0.16862746, 0.16862746, 0.16862746, 0.70980394)
+
+[node name="EndingScreen" type="Node" unique_id=1904719120]
+script = ExtResource("1_nmnc2")
+
+[node name="BgWater" type="Sprite2D" parent="." unique_id=1079314372]
+position = Vector2(384, 230)
+texture = ExtResource("2_0vuqh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2002601059]
+position = Vector2(143, 112.00001)
+scale = Vector2(0.37044272, 0.4375)
+texture = ExtResource("3_xik8g")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=283561047]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 291.0
+offset_top = 8.0
+offset_right = 1.0
+offset_bottom = -214.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=1650975374]
+custom_maximum_size = Vector2(350, -1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_5wvsv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_au6qu")
+text = "This game was based on the legendary botanists Elzada Clover and Lois Jotter who traveled the most dangerous river in the world to botonize the grand canyon. They spent 43 days on the journey and discovered four brand new species"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=589580283]
+offset_left = 375.0
+offset_top = 162.0
+offset_right = 483.0
+offset_bottom = 185.0
+theme_override_fonts/font = ExtResource("4_5wvsv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pmgec")
+text = "Art: NeoBunn"
+
+[node name="Label2" type="Label" parent="." unique_id=954104630]
+offset_left = 306.0
+offset_top = 194.0
+offset_right = 572.0
+offset_bottom = 217.0
+theme_override_fonts/font = ExtResource("4_5wvsv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pmgec")
+text = "Coding and Music: Inner_Elysium"
+
+[node name="Label3" type="Label" parent="." unique_id=508259905]
+offset_left = 371.0
+offset_top = 225.0
+offset_right = 492.0
+offset_bottom = 248.0
+theme_override_fonts/font = ExtResource("4_5wvsv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pmgec")
+text = "Unused Assets:"
+
+[node name="Bag" type="Sprite2D" parent="." unique_id=1344288216]
+position = Vector2(502.99997, 315.00003)
+scale = Vector2(0.054724395, 0.072105266)
+texture = ExtResource("5_rhhvx")
+
+[node name="BoatLeft" type="Sprite2D" parent="." unique_id=256776688]
+position = Vector2(62.000046, 314)
+scale = Vector2(0.3025974, 0.2874016)
+texture = ExtResource("6_p2vt5")
+
+[node name="BoatRight" type="Sprite2D" parent="." unique_id=1038152317]
+position = Vector2(587, 320)
+scale = Vector2(0.29025978, 0.28936988)
+texture = ExtResource("7_8gwtd")
+
+[node name="OptionBoat" type="Sprite2D" parent="." unique_id=681451645]
+position = Vector2(165, 311)
+scale = Vector2(0.3435484, 0.2858362)
+texture = ExtResource("8_7x7lc")
+
+[node name="OptionHealth" type="Sprite2D" parent="." unique_id=726586617]
+position = Vector2(264, 316.375)
+scale = Vector2(0.29032254, 0.24829346)
+texture = ExtResource("9_b20is")
+
+[node name="TumbleweedFloating" type="Sprite2D" parent="." unique_id=625934097]
+position = Vector2(379, 318.99997)
+scale = Vector2(0.38919666, 0.48734176)
+texture = ExtResource("10_leltq")
+
+[node name="Slash" type="Sprite2D" parent="." unique_id=433880122]
+position = Vector2(570, 256)
+rotation = 1.5707964
+scale = Vector2(0.3241206, 0.37319884)
+texture = ExtResource("11_0pnf8")
+
+[node name="Button" type="Button" parent="." unique_id=1227501929]
+offset_left = 2.0
+offset_top = 233.0
+offset_right = 296.0
+offset_bottom = 264.0
+text = "Click Here to Exit. Thanks for playing!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

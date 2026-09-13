@@ -5,6 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://dh0aoikbvrivv" path="res://Assets/beach camp.png" id="2_io27d"]
 [ext_resource type="FontFile" uid="uid://cxkikhbds3p3c" path="res://Assets/Super Three Personal Use Only.ttf" id="4_fdj0q"]
 
+[sub_resource type="Theme" id="Theme_4yqdo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5iks4"]
+bg_color = Color(0, 0, 0, 0.6392157)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cerb8"]
+
 [node name="Shop" type="Node" unique_id=1149620072]
 script = ExtResource("1_io27d")
 
@@ -27,6 +34,43 @@ grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="ShopSystem" unique_id=1390747171]
 
+[node name="Label" type="Label" parent="ShopSystem/CanvasLayer" unique_id=1244444180]
+offset_left = 165.0
+offset_top = 114.0
+offset_right = 256.0
+offset_bottom = 134.0
+theme = SubResource("Theme_4yqdo")
+theme_override_fonts/font = ExtResource("4_fdj0q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5iks4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cerb8")
+text = "Five Plants:"
+
+[node name="Label2" type="Label" parent="ShopSystem/CanvasLayer" unique_id=199139759]
+offset_left = 272.0
+offset_top = 114.0
+offset_right = 363.0
+offset_bottom = 134.0
+theme = SubResource("Theme_4yqdo")
+theme_override_fonts/font = ExtResource("4_fdj0q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5iks4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cerb8")
+text = "Fifty Plants:"
+
+[node name="Panel" type="Panel" parent="ShopSystem/CanvasLayer" unique_id=298111754]
+offset_left = 169.0
+offset_top = 82.0
+offset_right = 260.0
+offset_bottom = 82.0
+
+[node name="ShovelSize" type="Button" parent="ShopSystem/CanvasLayer/Panel" unique_id=704683572]
+layout_mode = 0
+offset_left = -6.5
+offset_top = 54.0
+offset_right = 89.5
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("4_fdj0q")
+text = "Shovel Size"
+
 [node name="Currency" type="Label" parent="ShopSystem/CanvasLayer" unique_id=157508609]
 unique_name_in_owner = true
 offset_left = 146.0
@@ -36,25 +80,13 @@ offset_bottom = 35.0
 theme_override_fonts/font = ExtResource("4_fdj0q")
 text = "TEXT"
 
-[node name="GridContainer" type="GridContainer" parent="ShopSystem/CanvasLayer" unique_id=912925837]
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Panel" type="Panel" parent="ShopSystem/CanvasLayer/GridContainer" unique_id=298111754]
-layout_mode = 2
-
-[node name="ShovelSize" type="Button" parent="ShopSystem/CanvasLayer/GridContainer/Panel" unique_id=704683572]
-layout_mode = 0
-offset_left = -73.0
-offset_top = 95.0
-offset_right = 23.0
-offset_bottom = 123.0
+[node name="EndGame" type="Button" parent="ShopSystem/CanvasLayer" unique_id=839391140]
+offset_left = 263.0
+offset_top = 135.0
+offset_right = 382.0
+offset_bottom = 163.0
 theme_override_fonts/font = ExtResource("4_fdj0q")
-text = "Shovel Size"
+text = "End The Game"
 
 [node name="Embark" type="Button" parent="." unique_id=1332857479]
 offset_left = 66.0
@@ -64,5 +96,6 @@ offset_bottom = 304.0
 theme_override_fonts/font = ExtResource("4_fdj0q")
 text = "Embark"
 
-[connection signal="pressed" from="ShopSystem/CanvasLayer/GridContainer/Panel/ShovelSize" to="." method="_on_shovel_size_pressed"]
+[connection signal="pressed" from="ShopSystem/CanvasLayer/Panel/ShovelSize" to="." method="_on_shovel_size_pressed"]
+[connection signal="pressed" from="ShopSystem/CanvasLayer/EndGame" to="." method="_on_end_game_pressed"]
 [connection signal="pressed" from="Embark" to="." method="_on_button_pressed"]
