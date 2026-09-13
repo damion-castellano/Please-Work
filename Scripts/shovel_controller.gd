@@ -13,3 +13,4 @@ func _physics_process(delta: float) -> void:
 		boat.get_parent().add_child(shovel_instance)
 		shovel_instance.global_position = boat.global_position
 		print("This is a Shovel")
+		print(Global.shovel_scale)

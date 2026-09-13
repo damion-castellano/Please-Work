@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://ctg6lc4vqhx12"]
 
 [ext_resource type="Texture2D" uid="uid://uluhbbt1yxi0" path="res://Assets/bg water.png" id="1_2shtd"]
+[ext_resource type="Script" uid="uid://dy2glr1hqspkd" path="res://Scripts/shop.gd" id="1_io27d"]
 [ext_resource type="Texture2D" uid="uid://dh0aoikbvrivv" path="res://Assets/beach camp.png" id="2_io27d"]
+[ext_resource type="FontFile" uid="uid://cxkikhbds3p3c" path="res://Assets/Super Three Personal Use Only.ttf" id="4_fdj0q"]
 
 [node name="Shop" type="Node" unique_id=1149620072]
+script = ExtResource("1_io27d")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=695659259]
 position = Vector2(308, 103)
@@ -13,3 +16,51 @@ texture = ExtResource("1_2shtd")
 position = Vector2(320.00003, 180)
 scale = Vector2(0.33333337, 0.33333337)
 texture = ExtResource("2_io27d")
+
+[node name="ShopSystem" type="Control" parent="." unique_id=508033172]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ShopSystem" unique_id=1390747171]
+
+[node name="Currency" type="Label" parent="ShopSystem/CanvasLayer" unique_id=157508609]
+unique_name_in_owner = true
+offset_left = 146.0
+offset_top = 12.0
+offset_right = 186.0
+offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("4_fdj0q")
+text = "TEXT"
+
+[node name="GridContainer" type="GridContainer" parent="ShopSystem/CanvasLayer" unique_id=912925837]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="ShopSystem/CanvasLayer/GridContainer" unique_id=298111754]
+layout_mode = 2
+
+[node name="ShovelSize" type="Button" parent="ShopSystem/CanvasLayer/GridContainer/Panel" unique_id=704683572]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("4_fdj0q")
+text = "Shovel Size"
+
+[node name="Embark" type="Button" parent="." unique_id=1332857479]
+offset_left = 66.0
+offset_top = 276.0
+offset_right = 139.0
+offset_bottom = 304.0
+theme_override_fonts/font = ExtResource("4_fdj0q")
+text = "Embark"
+
+[connection signal="pressed" from="ShopSystem/CanvasLayer/GridContainer/Panel/ShovelSize" to="." method="_on_shovel_size_pressed"]
+[connection signal="pressed" from="Embark" to="." method="_on_button_pressed"]

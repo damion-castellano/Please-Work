@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://b0e6eliuaswi3"]
 
 [ext_resource type="Script" uid="uid://b05nmmnotdwlh" path="res://Scripts/time_manager.gd" id="1_08ef8"]
-[ext_resource type="PackedScene" uid="uid://p6vmpup16jdi" path="res://Scenes/end_screen.tscn" id="2_huk8s"]
+[ext_resource type="PackedScene" uid="uid://ctg6lc4vqhx12" path="res://Scenes/shop.tscn" id="2_08ef8"]
 
 [node name="TimeManager" type="Node" unique_id=904814452]
 script = ExtResource("1_08ef8")
-end_screen_scene = ExtResource("2_huk8s")
+shop_screen_scene = ExtResource("2_08ef8")
 
 [node name="Timer" type="Timer" parent="." unique_id=1284146030]
-wait_time = 15.0
+wait_time = 2.0
 one_shot = true
 autostart = true
